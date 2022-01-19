@@ -1,8 +1,4 @@
-#ftiakse ena rock-paper-scissors game
-# to programma tha dialegei mia apo tis treis epiloges tuxaia
-# sti sunexeia tha zitaei apo ton xristi na dialeksei mia apo tis 3 epiloges
-#kai meta apo tis katalliles if statements tha mas deixnei poios kerdise
-# kalo tha einai to programma na bgazei mnm ston xristi an exei dwsei alli epilogi aptis 3 vasikes
+
 from random import randint
 
 
@@ -30,19 +26,18 @@ from random import randint
 #     else:
 #         print("player wins")
 # else:
-#     print("prospathise ksana malaka")
+#     print("try again")
 
 
 
-#den tha termatizei mexri opaikths na kerdisei
 epiloges = ["rock", "paper", "scissors"]
 #niki_pc = True
 pc_score = 0
 pl_score = 0
 while pc_score <3 or pl_choice <3:
     rand_ch = epiloges[randint(0,2)]
-    pl_choice = input("Dialekse ena: ").lower()
-    print(f" Epilogi upologisti: {rand_ch}, Epilogi paikti: {pl_choice}")
+    pl_choice = input("Choose One: ").lower()
+    print(f" PC choice: {rand_ch}, Player choice: {pl_choice}")
     if pl_choice == rand_ch:
         print("draw")
     elif pl_choice == "rock":
@@ -67,4 +62,4 @@ while pc_score <3 or pl_choice <3:
             pl_score = pl_score+1
             print("player wins")
     else:
-        print("prospathise ksana malaka")
+        print("try again")
